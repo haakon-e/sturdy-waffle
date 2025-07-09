@@ -1,3 +1,13 @@
+"""
+    horizontal_derivative!(dxdu, u, dx; boundary_condition = :periodic)
+
+Compute the horizontal derivative of `u` with respect to `x` using a second-order central difference scheme.
+
+# Arguments
+- `dxdu`: the derivative of `u` with respect to `x`
+- `u`: the input array
+- `dx`: the grid spacing
+"""
 function horizontal_derivative!(dxdu, u, dx; boundary_condition = :periodic)
     n = length(u)
     for i in 1:n
