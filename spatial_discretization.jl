@@ -7,6 +7,10 @@ Compute the horizontal derivative of `u` with respect to `x` using a second-orde
 - `dxdu`: the derivative of `u` with respect to `x`
 - `u`: the input array
 - `dx`: the grid spacing
+
+# Boundary Conditions
+- `:periodic`: the boundary conditions are periodic
+- `:dirichlet`: the boundary conditions are Dirichlet
 """
 function horizontal_derivative!(dxdu, u, dx; boundary_condition = :periodic)
     n = length(u)
